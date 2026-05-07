@@ -2,10 +2,11 @@
 @import "tailwindcss";
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  background-color: pink;
 }
 
 a,
@@ -16,6 +17,7 @@ a,
   padding: 3px;
 }
 
+/* hover只对pc生效，防止将mobile的点击作为hover */
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
@@ -25,12 +27,17 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    flex-direction: row;
+    /* 垂直居中 */
+    /* place-items: center; */
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 2rem; */
+    padding: 0;
   }
 }

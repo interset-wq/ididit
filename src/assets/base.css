@@ -62,9 +62,13 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
+
+  /* 丝滑渐变动画hover等 */
   transition:
     color 0.5s,
     background-color 0.5s;
+
+  /* 行高相对字号的大小，行高更适合阅读 */
   line-height: 1.6;
   font-family:
     Inter,
@@ -79,7 +83,7 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
