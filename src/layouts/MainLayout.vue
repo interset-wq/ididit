@@ -3,43 +3,36 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="layout">
-    <header class="layout-header">
-      <div class="layout-nav">
-        <RouterLink to="/" class="nav-link">Home</RouterLink>
-        <RouterLink to="/" class="nav-link">About</RouterLink>
-      </div>
-    </header>
+  <header class="layout-header">
+    <div class="layout-nav">
+      <RouterLink to="/" class="nav-link">Home</RouterLink>
+      <RouterLink to="/about" class="nav-link">About</RouterLink>
+    </div>
+  </header>
 
-    <main class="layout-main">
-      <RouterView />
-    </main>
+  <main class="layout-main">
+    <RouterView />
+  </main>
 
-    <footer class="layout-footer">
-      <p>&copy;2026 interset-wq</p>
-    </footer>
-  </div>
+  <footer class="layout-footer">
+    <p>&copy;{{ new Date().getFullYear() }} interset-wq</p>
+  </footer>
 </template>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
 .layout-header {
   border-bottom: 1px solid #e5e7eb;
   background-color: skyblue;
   height: 50px;
+  width: 100vw;
   padding: 0 2rem;
 }
 
 .layout-nav {
   display: flex;
   gap: 2rem;
-  height: 50px; /* 与 header 高度保持一致，才能垂直居中 */
+  height: 50px;
+  /* 与 header 高度保持一致，才能垂直居中 */
   align-items: center;
 }
 
@@ -66,15 +59,23 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 新增：内容垂直居中 */
+  justify-content: center;
 }
 
 .layout-footer {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border-top: 1px solid #e5e7eb;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
+  padding: 1rem 2rem;
   color: #6b7280;
-  background-color: #f9fafb;
+  /* background-color: #f9fafb; */
+  background-color: skyblue;
+}
+
+.layout-footer p {
+  margin: 0;
 }
 </style>
